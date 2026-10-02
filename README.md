@@ -1,7 +1,10 @@
 # ملاحظاتي الاحترافية - Pro Notes 📝✨
 
 > **تطبيق تدوين ملاحظات وقوائم مهام احترافي متكامل مبني بأحدث تقنيات Android و Jetpack Compose و Material Design 3 مع دعم كامل للحفظ المحلي الآمن ومقاومة فقدان البيانات.**
+> 
+> 👨‍💻 **تصميم وبرمجة: محمد هشام الصلاحي (Mohammed Hisham Al-Salahi)**
 
+[![Developer](https://img.shields.io/badge/Developer-Mohammed%20Hisham%20Al--Salahi-blue.svg)](https://github.com)
 [![Android CI](https://github.com/aistudio/pro-notes/actions/workflows/android.yml/badge.svg)](https://github.com/aistudio/pro-notes/actions)
 [![Kotlin](https://img.shields.io/badge/Kotlin-2.0+-blue.svg)](https://kotlinlang.org)
 [![Jetpack Compose](https://img.shields.io/badge/Jetpack%20Compose-Material%203-green.svg)](https://developer.android.com/jetpack/compose)

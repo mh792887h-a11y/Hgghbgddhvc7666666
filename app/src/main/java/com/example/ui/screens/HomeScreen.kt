@@ -39,6 +39,7 @@ import androidx.compose.material.icons.filled.Description
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.FilterList
 import androidx.compose.material.icons.filled.GridView
+import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.PushPin
 import androidx.compose.material.icons.filled.Search
@@ -77,6 +78,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.data.model.DefaultCategories
 import com.example.data.model.Note
+import com.example.ui.components.AboutAppDialog
 import com.example.ui.components.CategoryChipRow
 import com.example.ui.components.EmptyStateView
 import com.example.ui.components.NoteCard
@@ -108,7 +110,12 @@ fun HomeScreen(
     var showSortMenu by remember { mutableStateOf(false) }
     var isFabExpanded by remember { mutableStateOf(false) }
     var showTemplatesDialog by remember { mutableStateOf(false) }
+    var showAboutDialog by remember { mutableStateOf(false) }
     var noteToUnlock by remember { mutableStateOf<Note?>(null) }
+
+    if (showAboutDialog) {
+        AboutAppDialog(onDismiss = { showAboutDialog = false })
+    }
 
     if (showTemplatesDialog) {
         TemplatesDialog(
@@ -258,6 +265,14 @@ fun HomeScreen(
                                     onClick = {
                                         showMenu = false
                                         viewModel.navigateTo(Screen.Stats)
+                                    }
+                                )
+                                DropdownMenuItem(
+                                    text = { Text("حول التطبيق والمطور") },
+                                    leadingIcon = { Icon(Icons.Default.Info, contentDescription = null, tint = MaterialTheme.colorScheme.primary) },
+                                    onClick = {
+                                        showMenu = false
+                                        showAboutDialog = true
                                     }
                                 )
                             }
