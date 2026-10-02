@@ -34,7 +34,7 @@ jobs:
             chmod +x ./gradlew
           fi
 
-      - name: Run Unit & Robolectric Tests
+      - name: Run Local Unit Tests
         run: ./gradlew testDebugUnitTest --stacktrace --no-daemon
 
       - name: Build Debug APK
