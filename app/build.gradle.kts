@@ -30,10 +30,10 @@ android {
       keyAlias = "upload"
       keyPassword = System.getenv("KEY_PASSWORD")
     }
-    create("debugConfig") {
-      val debugKey = file("${rootDir}/debug.keystore")
-      if (debugKey.exists()) {
-        storeFile = debugKey
+    getByName("debug") {
+      val rootDebugKey = file("${rootDir}/debug.keystore")
+      if (rootDebugKey.exists()) {
+        storeFile = rootDebugKey
         storePassword = "android"
         keyAlias = "androiddebugkey"
         keyPassword = "android"
@@ -48,7 +48,9 @@ android {
       proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
       signingConfig = signingConfigs.getByName("release")
     }
-    debug { signingConfig = signingConfigs.getByName("debugConfig") }
+    debug {
+      signingConfig = signingConfigs.getByName("debug")
+    }
   }
   compileOptions {
     sourceCompatibility = JavaVersion.VERSION_11
