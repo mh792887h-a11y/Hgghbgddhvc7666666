@@ -34,11 +34,11 @@ jobs:
             chmod +x ./gradlew
           fi
 
-      - name: Run Local Unit Tests
-        run: ./gradlew testDebugUnitTest --stacktrace --no-daemon
-
       - name: Build Debug APK
         run: ./gradlew assembleDebug --stacktrace --no-daemon
+
+      - name: Run Unit Tests
+        run: ./gradlew testDebugUnitTest --stacktrace --no-daemon
 
       - name: Upload Debug APK Artifact
         uses: actions/upload-artifact@v4

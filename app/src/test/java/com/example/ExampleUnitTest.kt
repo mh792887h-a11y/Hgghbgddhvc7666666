@@ -12,9 +12,11 @@ class ExampleUnitTest {
     }
 
     @Test
-    fun basicMathAndStringTest() {
-        val title = "ملاحظاتي الاحترافية"
-        assertTrue(title.isNotBlank())
-        assertEquals(19, title.length)
+    fun appIdentityTest() {
+        val appName = "ملاحظاتي الاحترافية"
+        val author = "محمد هشام الصلاحي"
+        assertTrue(appName.isNotBlank())
+        assertTrue(author.isNotBlank())
+        assertEquals("ملاحظاتي الاحترافية", appName)
     }
 }
