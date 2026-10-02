@@ -1,0 +1,6 @@
+{
+  "name": "ملاحظاتي الاحترافية",
+  "description": "تطبيق تدوين ملاحظات وقوائم مهام احترافي مع تنظيم بالتصنيفات وتثبيت الملاحظات والبحث السريع",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
